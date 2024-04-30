@@ -27,7 +27,7 @@ export default async function Category() {
         <Box py={'9'}>
             <Heading as="h1" size={'9'} align={'center'} py={'7'}>All Categories</Heading>
             {categories.map(category => (
-                <Section className={styles.container_inner} my={'7'}>
+                <Section className={styles.container_inner} my={'7'} key={category}>
                     <Container size={"4"} className={styles.category_container} py={'9'} key={category}>
                         <Heading as="h2" align={'left'} size={'7'} style={{ textTransform: 'capitalize' }} className={styles.category_title}>
                             <Link href={`/category/${category}`}>
@@ -35,8 +35,8 @@ export default async function Category() {
                             </Link>
                         </Heading>
                         <Grid columns={{ initial: '1', md: `repeat(3, 1fr)` }} rows='repeat(auto, 1fr)' gap={'3'} py={'7'} align={'center'} justify={'between'}>
-                            {allProducts.filter(product => product.category === category).map(product => (
-                                <ProductCardGrid product={product} />
+                            {allProducts.filter(product => product.category === category).map((product, imdex) => (
+                                <ProductCardGrid product={product} key={product[index]?.id}/>
                             ))}
                         </Grid>
 
