@@ -34,7 +34,7 @@ export default async function MainNavigation() {
                                 </DropdownMenu.Trigger>
                                 <DropdownMenu.Content className={style.dropdown} align={'center'}>
                                     {categories.map(category => (
-                                        <ThemeLink href={`/category/${category}`} style={{ textTransform: 'capitalize', padding: '0.45rem' }}>{category}</ThemeLink>
+                                        <ThemeLink href={`/category/${category}`} style={{ textTransform: 'capitalize', padding: '0.45rem' }} key={category}>{category}</ThemeLink>
                                     ))}
                                     <DropdownMenu.Separator />
                                     <ThemeLink href='/category' style={{ background: 'var(--custom-primary)', color: 'var(--custom-secondary)', padding: '0.45rem', textAlign: 'center' }}>All Categories</ThemeLink>
