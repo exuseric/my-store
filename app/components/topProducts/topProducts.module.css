@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--custom-secondary);
+}
+
+.h1 {
+    color: var(--custom-accent);
+    max-width: 8ch;
+}
+
+.product_title {
+    max-width: 35ch;
+}
