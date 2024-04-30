@@ -35,7 +35,7 @@ export default async function Category() {
                             </Link>
                         </Heading>
                         <Grid columns={{ initial: '1', md: `repeat(3, 1fr)` }} rows='repeat(auto, 1fr)' gap={'3'} py={'7'} align={'center'} justify={'between'}>
-                            {allProducts.filter(product => product.category === category).map((product, imdex) => (
+                            {allProducts.filter(product => product.category === category).map((product, index) => (
                                 <ProductCardGrid product={product} key={product[index]?.id}/>
                             ))}
                         </Grid>
